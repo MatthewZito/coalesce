@@ -1,6 +1,9 @@
 # coalesce-x
 
-## Highly performant implementation of SQL `COALESCE` for JavaScript. Return the first value that is not null or undefined.
+## Highly performant implementation of SQL `COALESCE` for JavaScript. Return the first value that is not null or undefined
+
+[![Build Status](https://travis-ci.com/MatthewZito/coalesce.svg?branch=master)](https://travis-ci.com/MatthewZito/coalesce)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ### Why?
 
