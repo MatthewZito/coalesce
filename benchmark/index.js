@@ -1,4 +1,4 @@
-import coalesce from '../lib'; // avg 1452
+import { coalesce } from '../lib'; // avg 1452
 import benchmark from './runner';
 
 const iterations = 100000000;
