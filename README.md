@@ -14,6 +14,7 @@ JavaScript evaluates 'falsy' values such as 0 and '' as false, ergo the logical 
 
 - [Supported Environments](#builds)
 - [Installation + Usage](#usage)
+  - [Supply Your Own Skip Value](#skip)
 
 ## <a name="builds"></a> Supported Environments
 
@@ -30,20 +31,32 @@ yarn add coalesce-x
 ```
 
 ```js
-const coalesce = require('coalesce-x');
+const { coalesce } = require('coalesce-x');
 
 (function t (num) {
   num = coalesce(num, 9);
-  while (num < 9) {
-    console.log({ num });
+  for (let i = 0; i < num; i++) {
+    console.log({ i });
   }
-})();
+})(null);
 ```
 
 ```js
-import coalesce from 'coalesce-x';
+import { coalesce } from 'coalesce-x';
 
 const fallback = 9;
 
 const v = coalesce(maybeVal1, maybeVal2, maybeVal3, fallback);
+```
+
+## <a name="skip"></a> Customization
+
+You can also utilize the `coalescent` function and supply your own list of values to coalesce against.
+
+```js
+import { coalescent } from 'coalesce-x';
+
+const coalesceOdds = coalescent(1,3,5,7,9);
+
+const firstEven = coalesceOdds(1,3,6,3); // 6
 ```

@@ -1,6 +1,6 @@
 import test from 'tape';
 
-import coalesce from '../lib';
+import { coalesce } from '../lib';
 
 /* Init TAP */
 test('coalesce resolves the first non-null value', t => {
@@ -55,4 +55,3 @@ test('coalesce passes falsy albeit extant values', t => {
 
   t.end();
 });
-

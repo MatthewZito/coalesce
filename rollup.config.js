@@ -11,7 +11,7 @@ export default [
     output: {
       file: pkg.main,
       format: 'cjs',
-      exports: 'default'
+      exports: 'named'
     },
     plugins: [
       commonjs(), // ensure dependencies are commonjs *prior* to transpilation
